@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:project/services/api_service.dart';
+import 'package:project/ui/screens/home_screen.dart';
 
 class ChatInputWidget extends StatelessWidget {
+   late final data;
 
-  
-  
+   ChatInputWidget({super.key, this.data});
   @override
   Widget build(BuildContext context) {
     final controller = Get.put(ApiServiceController());
@@ -26,9 +27,9 @@ class ChatInputWidget extends StatelessWidget {
             ),
             IconButton(
               icon: Icon(Icons.send),
-              onPressed: () async{
-
-               await controller.sendQueryToDb(controller.inputQuery.text); 
+              onPressed: () async {
+                print('passing' + controller.inputQuery.text);
+                  await controller.sendQueryToDb(controller.inputQuery.text);
               },
             ),
           ],
