@@ -79,7 +79,7 @@ class HomeScreenContent extends StatelessWidget {
                       if (controller.data.isEmpty) {
                         return Text('No data yet, send a query!');
                       }
-                      return Text(controller.data["data"]["rows"][0][2].toString()?? 'Data received'); // ✅ Ensures UI updates
+                      return Text(controller.data.toString()?? 'Data received'); // ✅ Ensures UI updates
                     }),
                   ),
                 ),

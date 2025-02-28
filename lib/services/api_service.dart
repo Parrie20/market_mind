@@ -23,7 +23,7 @@ class ApiServiceController extends GetxController{
 
   Future<void> sendQueryToDb(String query) async {
     try {
-      var url = Uri.parse("http://192.168.1.10:5000/query");
+      var url = Uri.parse("http://192.168.43.114:5000/query");
       print('Fetching');
 
       final response = await http.post(
